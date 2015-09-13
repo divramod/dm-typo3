@@ -62,7 +62,7 @@ task.start = co.wrap(function*(p1) {
     spawn(command);
 
     // =========== [ give rights ] ===========
-    var command = "sudo chmod -R 755 " + projectName + "/code";
+    var command = "sudo chmod -R 777 " + projectName + "/code";
     spawn(command);
 
     // =========== [ rm tar.gz ] ===========
@@ -74,14 +74,15 @@ task.start = co.wrap(function*(p1) {
     var command = "touch " + projectName + "/code/FIRST_INSTALL";
     spawn(command);
 
+    // =========== [ open browser ] ===========
+    var command = "google-chrome http://localhost:8000";
+    spawn(command);
+
     // =========== [ start ] ===========
     var command = "cd " + projectName + " && sudo docker-compose up";
     console.log(command);
     spawn(command);
 
-    // =========== [ open browser ] ===========
-    var command = "google-chrome http://localhost:8000";
-    spawn(command);
 
     return yield Promise.resolve(p1);
   } catch (e) {
