@@ -19,6 +19,32 @@ npm install dm-typo3 --save # for programmatically use
 
 ## Tasks
 
+### [createProject](tasks/createProject/index.js)
+* creates a typo3 project wrapped in a docker container
+
+#### createProject global usage
+```
+dmt3 [createProject|cp]
+```
+
+#### createProject programmatically usage
+```javascript
+var createProject = require("dm-typo3").createProject;
+var createProjectResult = createProject.start();
+```
+
+#### createProject steps
+
+#### createProject features
+
+#### createProject config
+```javascript
+{
+    "createProject": {
+    }
+}
+```
+
 ### [exampleAsync](tasks/exampleAsync/index.js)
 * 
 

@@ -13,6 +13,11 @@ jobs.index = co.wrap(function*() {
 
         // automatically add tasks here
 
+        // =========== [ createProject ] ===========
+        else if (['createProject','cp'].indexOf(argv2) > -1) {
+            var task = require("./tasks/createProject/index.js");
+            task.start();
+        }
         // =========== [ exampleAsync ] ===========
         else if (['exampleAsync'].indexOf(argv2) > -1) {
             var task = require("./tasks/exampleAsync/index.js");
