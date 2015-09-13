@@ -56,13 +56,13 @@ task.start = co.wrap(function*(p1) {
 
     // =========== [ link ] ===========
     // https://docs.typo3.org/typo3cms/InstallationGuide/QuickInstall/GetAndUnpack/Index.html
-    var command = "ln -s " + process.cwd() + "/" + projectName + "/code/typo3_src/index.php " + process.cwd() + "/" + projectName + "/code/index.php";
+    var command = "cd " + projectName + "/code && ln -s typo3_src/index.php index.php";
     spawn(command);
-    var command = "ln -s " + process.cwd() + "/" + projectName + "/code/typo3_src/typo3 " + process.cwd() + "/" + projectName + "/code/typo3";
+    var command = "cd " + projectName + "/code && ln -s typo3_src/typo3 typo3";
     spawn(command);
 
     // =========== [ give rights ] ===========
-    var command = "sudo chmod 777 " + projectName + "/code";
+    var command = "sudo chmod -R 755 " + projectName + "/code";
     spawn(command);
 
     // =========== [ rm tar.gz ] ===========
@@ -70,21 +70,18 @@ task.start = co.wrap(function*(p1) {
     console.log(command);
     spawn(command);
 
-    //TODO
     // =========== [ touch FIRST_INSTALL  ] ===========
     var command = "touch " + projectName + "/code/FIRST_INSTALL";
     spawn(command);
 
-    //TODO
     // =========== [ start ] ===========
-    var command = "cd " + projectName + " && sudo docker-compose up -d";
+    var command = "cd " + projectName + " && sudo docker-compose up";
     console.log(command);
     spawn(command);
 
-    //TODO
     // =========== [ open browser ] ===========
     var command = "google-chrome http://localhost:8000";
-    //spawn(command);
+    spawn(command);
 
     return yield Promise.resolve(p1);
   } catch (e) {
