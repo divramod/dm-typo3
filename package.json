@@ -1,0 +1,41 @@
+{
+    "private": false,
+    "name": "dm-typo3",
+    "shortcut": "dmt3",
+    "version": "0.0.0",
+    "description": "typo 3 helper",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --harmony --require co-mocha --watch --reporter landing",
+        "start": "node --harmony ./bin/dm-typo3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/divramod/dm-typo3.git"
+    },
+    "keywords": [
+        "npm",
+        "template"
+    ],
+    "author": "AUTHOR",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/divramod/dm-typo3/issues"
+    },
+    "homepage": "https://github.com/divramod/dm-typo3",
+    "dependencies": {
+        "chai": "^2.1.0",
+        "co": "^4.4.0",
+        "co-mocha": "^1.1.0",
+        "colors": "^1.1.2",
+        "dm-npm": "^0.1.14",
+        "mocha": "^2.1.0",
+        "shelljs": "^0.5.3"
+    },
+    "bin": {
+        "dmt3": "./bin/dm-typo3",
+        "dm-typo3": "./bin/dm-typo3",
+        "gdmt3": "./bin/gdm-typo3",
+        "dmt3g": "./bin/gdm-typo3"
+    }
+}
