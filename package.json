@@ -2,7 +2,7 @@
   "private": false,
   "name": "dm-typo3",
   "shortcut": "dmt3",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "typo 3 helper",
   "main": "index.js",
   "scripts": {
