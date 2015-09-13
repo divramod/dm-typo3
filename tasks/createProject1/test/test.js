@@ -3,19 +3,17 @@ var expect = require('chai').expect;
 var colors = require("colors");
 
 // =========== [ dm-file TESTS ] ===========
-describe('createProject async'.red, function() {
+describe('createProject sync'.red, function() {
 
     // =========== [ start ] ===========
-    it('success: should ...', function* success() {
-        var result =
-            yield require('./../index.js').start("createProject");
+    it('success: should ...', function success() {
+        var result = require('./../index.js').start("createProject");
         result.should.equal("createProject");
     });
 
     // =========== [ start ] ===========
-    it.skip('error: should ...', function* error() {
-        var result =
-            yield require('./../index.js').start("createProject");
+    it('error: should ...', function error() {
+        var result = require('./../index.js').start("createProject");
         result.should.equal("falsecreateProject");
     });
 

@@ -14,7 +14,7 @@ jobs.index = co.wrap(function*() {
         // automatically add tasks here
 
         // =========== [ createProject ] ===========
-        else if (['createProject','cp'].indexOf(argv2) > -1) {
+        else if (['createProject'].indexOf(argv2) > -1) {
             var task = require("./tasks/createProject/index.js");
             task.start();
         }
