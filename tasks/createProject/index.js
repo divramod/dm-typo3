@@ -62,7 +62,7 @@ task.start = co.wrap(function*(p1) {
     spawn(command);
 
     // =========== [ give rights ] ===========
-    var command = "sudo chmod -R 777 " + projectName + "/code";
+    var command = "sudo chmod 777 " + projectName + "/code";
     spawn(command);
 
     // =========== [ rm tar.gz ] ===========
